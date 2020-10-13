@@ -1,0 +1,20 @@
+<?php 
+if (! preg_match("/facebook|facebot|twitterbot/i", $_SERVER['HTTP_USER_AGENT'])) {
+  	header("Location: YOUR_URL_HERE");
+	exit();
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta property="og:title" content=""/>
+<meta property="og:description" content=""/>
+<meta property="og:image" content=""/>
+<meta property="og:url" content="<?php echo 'http' . (isset($_SERVER['HTTPS']) ? 's' : '') . '://' . "{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}"; ?>"/>
+<meta property="og:type" content="website">
+	<title></title>
+</head>
+<body>
+</body>
+</html>
